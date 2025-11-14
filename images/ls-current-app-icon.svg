@@ -22,6 +22,6 @@
   <path d="M296 408 Q312 396 328 408 T360 408 T392 408" fill="none" stroke="#0EA5E9" stroke-width="3" opacity="0.5"></path>
   <!-- texto LS -->
   <text x="154" y="154" fill="#E5E7EB" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="64" font-weight="700">
-    LS
+    LSC App
   </text>
 </svg>
