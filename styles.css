@@ -610,3 +610,280 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* ---------- LS CURRENT APP – MOBILE STYLE ---------- */
+
+.phone-shell {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.phone-frame {
+  width: min(420px, 100%);
+  background: #020617;
+  border-radius: 2rem;
+  padding: 1.2rem 1.1rem 1.1rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.85);
+  margin-top: 2rem;
+}
+
+/* Cabecera de la app */
+
+.phone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.phone-header h1 {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.phone-header p {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.phone-location {
+  text-align: right;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.phone-location .loc-name {
+  display: block;
+  font-weight: 600;
+  color: #e5e7eb;
+  margin-bottom: 0.1rem;
+}
+
+/* Segment control (Now / +1h / +3h) */
+
+.segment-control {
+  display: flex;
+  background: #020617;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  padding: 0.15rem;
+  margin-bottom: 1.1rem;
+}
+
+.segment-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  font-size: 0.8rem;
+  padding: 0.45rem 0.4rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.segment-btn.active {
+  background: #38bdf8;
+  color: #020617;
+  font-weight: 600;
+}
+
+/* Grid simplificado para móvil */
+
+.phone-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+/* Mapita */
+
+.map-card {
+  margin-top: 0.5rem;
+}
+
+.current-map {
+  position: relative;
+  margin-top: 0.6rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.25), transparent 55%),
+              radial-gradient(circle at 80% 80%, rgba(15, 118, 110, 0.3), transparent 55%),
+              #020617;
+  height: 150px;
+  overflow: hidden;
+}
+
+.map-boat {
+  position: absolute;
+  left: 45%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+}
+
+.map-arrow {
+  position: absolute;
+  font-size: 1.1rem;
+  color: #e5e7eb;
+}
+
+.map-arrow.arrow1 {
+  left: 20%;
+  top: 30%;
+  transform: rotate(20deg);
+}
+
+.map-arrow.arrow2 {
+  left: 60%;
+  top: 20%;
+  transform: rotate(40deg);
+}
+
+.map-arrow.arrow3 {
+  left: 75%;
+  top: 65%;
+  transform: rotate(10deg);
+}
+
+.map-legend {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.legend-dot.strong {
+  background: #38bdf8;
+}
+
+.legend-dot.medium {
+  background: rgba(56, 189, 248, 0.6);
+}
+
+.legend-dot.weak {
+  background: rgba(148, 163, 184, 0.7);
+}
+
+/* Vector row */
+
+.vector-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.vector-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+}
+
+.vector-label {
+  color: #9ca3af;
+  margin-bottom: 0.1rem;
+}
+
+.vector-value {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.vector-sub {
+  color: #9ca3af;
+}
+
+/* Mini chart timeline */
+
+.mini-chart {
+  position: relative;
+  margin-top: 0.8rem;
+  height: 70px;
+  border-radius: 0.7rem;
+  background: #020617;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  overflow: hidden;
+}
+
+.mini-chart-line {
+  position: absolute;
+  inset: 0;
+  opacity: 0.8;
+}
+
+.mini-chart-line.boatspeed {
+  background: linear-gradient(
+    90deg,
+    rgba(56, 189, 248, 0.05),
+    rgba(56, 189, 248, 0.6),
+    rgba(56, 189, 248, 0.1)
+  );
+}
+
+.mini-chart-line.current {
+  background: linear-gradient(
+    90deg,
+    rgba(248, 250, 252, 0.02),
+    rgba(248, 250, 252, 0.4),
+    rgba(248, 250, 252, 0.08)
+  );
+}
+
+/* Bottom nav tipo app */
+
+.phone-bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid rgba(15, 23, 42, 0.9);
+}
+
+.bottom-btn {
+  flex: 1;
+  background: transparent;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 0.5rem 0.2rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.bottom-btn.active {
+  border-color: rgba(56, 189, 248, 0.7);
+  background: rgba(56, 189, 248, 0.15);
+  color: #e5e7eb;
+}
+
+.bottom-label {
+  display: block;
+}
+
+/* responsive: en pantallas muy pequeñas la “carcasa” ocupa toda la anchura */
+@media (max-width: 480px) {
+  .phone-frame {
+    border-radius: 1.3rem;
+    padding-inline: 0.9rem;
+  }
+}
